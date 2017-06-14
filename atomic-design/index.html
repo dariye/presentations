@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>LSW - Atomic Design</title>
+  <link href='big.css' rel='stylesheet' type='text/css' />
+  <link href='highlight.css' rel='stylesheet' type='text/css' />
+  <style>
+    .new-shiny { background: #aaaaaa; }
+    @-webkit-keyframes blinker {
+      from { opacity: 1.0; }
+      to { opacity: 0.5; }
+    }
+    .blink {
+      -webkit-animation-name: blinker;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+      -webkit-animation-duration: 800ms;
+    }
+    .center-image {
+        background-position: top center;
+    }
+    pre {
+        margin:0;
+        padding:0.2em;
+        background:#fff;
+        color:#000;
+        font-weight:normal;
+    }
+
+    pre em {
+        color:#000;
+        background: #47C1FC;
+    }
+   .row {
+      margin: 1em auto; 
+   }
+  </style>
+  <script src='big.js'></script>
+  <script src='highlight.js'></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class='light'>
+  <div><a href="http://bradfrost.com/blog/post/atomic-web-design">Atomic Design</a></div>
+  <div>
+    Overview:
+    <ul> 
+      <li>What is Atomic Design?</li>
+      <li>Why Atomic Design?</li>
+      <li>Elements of Atomic Design</li>
+      <li>Code Examples</li>
+      <li>Atomic Components</li>
+      <li>With <a href="https://www.styled-components.com"
+                  target="_blank">styled-components</a></li>
+      <li>Questions?</li>
+      <li>Corollary: Thinking in Atoms</li>
+      <li>References</li>
+    </ul>
+  </div>
+  <div>What is Atomic Design?</div>
+  <div>Atomic design is a methodology for creating design systems</div>
+  <div>A design <strong>system</strong> unites your style guide, brand identity,
+    /design language, and codebase</div>
+  <div>Why Atomic Design?</div>
+  <div>Elements of Atomic Design</div>
+  <div data-bodyclass="center-image" data-background-image="./images/periodic-table.png"></div>
+  <div>An atomic design pattern is made up of: 
+      <ol>
+        <li>Atoms</li>
+        <li>Molecules</li>
+        <li>Organisms</li>
+        <li>Templates</li>
+        <li>Pages</li>
+      </ol>
+  </div>
+  <div>Dependency Pyramid</div>
+  <div data-bodyclass="center-image" data-background-image="./images/dependency-pyramid.jpeg"></div>
+  <div><blockquote><p>We’re not designing pages, we’re designing systems of
+                                     components</p><cite>Stephen
+                                       Hay</cite></blockquote>
+  </div>
+  <div>Code Examples</div>
+  <div>
+    Atoms are simple elements
+    <div class="row">
+      <pre><code>&lt;input type=&quot;text&quot;
+      name=&quot;firstname&quot; placeholder=&quot;Enter your
+        first name&quot;&gt; </code></pre>
+      <input type="text" name="firstname" placeholder="Enter your
+        first name"/>
+
+    </div>
+    <div class="row">
+      <pre><code><button>Touch Me!</button></code></pre>
+    </div>
+  </div>
+  <div>
+    Molecules are collections of atoms
+    <div class="row">
+      <code>
+        <form>
+          <input type="text" name="firstname" placeholder="Enter your
+        first name"/>
+          <input type="submit" value="Touch Me!" />
+        </form>
+      </code>
+    </div>
+  </div>
+  <div>Atomic Components</div>
+  <div>With <a href="https://www.styled-components.com"
+               target="_blank"><img src="./images/styled-components.png"
+                                    width="300"
+                                    alt="styled-components logo" /></a></div>
+  <div>Corollary: Thinking in Atoms</div>
+  <div>As a naming convention</div>
+  <div>As a way to structure projects</div>
+  <div>As a component design guide: Dumb vs Smart Components</div>
+  <div class="blink">Questions?</div>
+  <div>
+    Resources:
+    <ul>
+      <li><a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Atomic Design</a></li>
+      <li><a href="http://atomicdesign.bradfrost.com/chapter-1/"
+          target="_blank">Design Systems</a></li>
+      <li><a href="http://patternlab.io" target="_blank">Atomic Design Systems
+          Boilerplate</a></li>
+      <li><a href="https://www.styled-components.com/" target="_blank">styled-components</a></li>
+      <li><a href="https://www.w3.org/DesignIssues/Principles.html"
+             target="_blank"> Principles of Design</a></li>
+      <li><a
+          href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0"
+          target="_blank">Smart and Dumb Components</a></li>
+    </ul>
+  </div>
+</body>
+</html>
